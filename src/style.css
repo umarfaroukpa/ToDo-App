@@ -1,0 +1,362 @@
+body {
+    background-color: #d2cbcb;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+
+}
+
+.light-mode {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f0f2f5;
+}
+
+#mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    cursor: pointer;
+    border: none;
+}
+
+body::before {
+    content: "Todo List \1F4D6 \270E";
+    font-size: 1.5rem;
+    display: block;
+    background-color: #B4DC7F;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    padding-left: 8.5rem;
+    border-bottom: solid 2px whitesmoke;
+}
+
+.todo-title {
+    color: #B4DC7F;
+    font-size: 1.3em;
+    /* margin-right: 22em; */
+
+}
+
+.btn-check {
+    font-size: 20px;
+    border: none;
+}
+
+.todo-description {
+    color: #B4DC7F;
+    font-size: 1.3em;
+}
+
+.toggle-button {
+    border: none;
+    font-size: 1.2em;
+    border-bottom: 2px solid #1abc9c;
+    color: #B4DC7F;
+}
+
+.todo-date {
+    border: none;
+    color: #B4DC7F;
+    font-size: 1.2em;
+
+}
+
+.btn-edit {
+    border: none;
+    font-size: 1.2em;
+    border-bottom: 2px solid #1abc9c;
+    color: #B4DC7F;
+}
+
+.btn-edit:hover {
+    color: #333;
+}
+
+.dlt-btn {
+    border: none;
+    font-size: 1.2em;
+    border-bottom: 2px solid #1abc9c;
+    color: #B4DC7F;
+
+}
+
+.dlt-btn:hover {
+    color: #333;
+}
+
+.toggle-button:hover {
+    background: #f0776c;
+    color: #333;
+    scale: 1.1;
+}
+
+.btnAdd {
+    border: none;
+    margin: 28px;
+    background-color: #B4DC7F;
+    color: whitesmoke;
+    font-size: 1.2em;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.btnAdd:hover {
+    background: #f0776c;
+    color: #333;
+    scale: 1.1;
+
+}
+
+.today {
+    border: none;
+    margin: 28px;
+    background-color: #B4DC7F;
+    color: whitesmoke;
+    font-size: 1.2em;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.today:hover {
+    background: #f0776c;
+    color: #333;
+    scale: 1.1;
+
+}
+
+.seven {
+    border: none;
+    margin: 35px;
+
+    background-color: #B4DC7F;
+    color: whitesmoke;
+    font-size: 1.2em;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.seven:hover {
+    background: #f0776c;
+    color: #333;
+    scale: 1.1;
+
+}
+
+
+
+li {
+    list-style-type: none;
+    background-color: #B9C3B3;
+    width: 74vw;
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 4px;
+    margin-left: 18.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+
+}
+
+
+li:first-child {
+    background: #3498db;
+}
+
+li:nth-child(2) {
+    background: #ffd071;
+}
+
+li:nth-child(3) {
+    background: #f0776c;
+}
+
+li:nth-child(4) {
+    background: #f0776c;
+}
+
+li:nth-child(5) {
+    background-color: #B4DC7F;
+
+}
+
+li:nth-child(6) {
+    background-color: #3498db;
+
+}
+
+li:last-child {
+    background: #1abc9c;
+}
+
+
+
+li :hover {
+    border-bottom: 0px;
+    color: #fff;
+}
+
+li:first-child {
+    border-left: 10px solid #B4DC7F;
+
+
+}
+
+li:nth-child(2) {
+    border-left: 10px solid #f0776c;
+}
+
+li:nth-child(3) {
+    border-left: 10px solid #1abc9c;
+}
+
+li:last-child {
+    border-left: 10px solid #B4DC7F;
+
+}
+
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20vw;
+    gap: 10px;
+    margin-left: 16em;
+    margin-top: -50px;
+    background-color: #B9C3B3;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 70%;
+
+}
+
+.dialog input,
+.dialog button {
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+
+.dialog button {
+    cursor: pointer;
+}
+
+
+.span label {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+input,
+button {
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+#sidebar-container {
+    position: fixed;
+    top: 74px;
+    width: 200px;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    padding: 20px;
+    background-color: #C3CDBC;
+
+}
+
+
+
+.sidebar.open {
+    left: 0;
+}
+
+
+
+.dialog label {
+    font-weight: bold;
+    position: absolute;
+    top: -90px;
+    left: 0;
+    z-index: 1;
+}
+
+
+.dialog input,
+.dialog button {
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+
+.dialog button {
+    cursor: pointer;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+@media (min-width: 600px) {
+
+    body {
+        font-size: 16px;
+    }
+
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .body::before {
+        font-size: 0.8rem;
+        width: 100%;
+
+    }
+
+
+}
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+
+    .sidebar {
+        width: 100%;
+    }
+
+
+    .toggle-button {
+        display: none;
+    }
+
+}
