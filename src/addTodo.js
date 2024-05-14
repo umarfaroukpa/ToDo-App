@@ -104,19 +104,27 @@ class AddTodo {
       const sevenDaysAgo = new Date();
       sevenDaysAgo.setDate(currentDate.getDate() - 7);
   
-      // Filter tasks created within the last seven days
-      const lastSevenDaysTasks = this.todos.filter(todo => {
+      // Check if there are any todos created within the last seven days
+      const lastSevenDaysTasksExist = this.todos.some(todo => {
           const todoDate = new Date(todo.createdAt);
           return todoDate >= sevenDaysAgo && todoDate <= currentDate;
-          if (!todos) {
-            alert ('No Record')
-          }
-         
       });
   
-      // Display the filtered tasks (You can replace this with your own logic)
-      console.log(lastSevenDaysTasks);
+      // Display an alert if there are no records for the last seven days
+      if (!lastSevenDaysTasksExist) {
+          window.alert('No Todos Records For The Last Seven Days');
+      } else {
+          // Filter tasks created within the last seven days
+          const lastSevenDaysTasks = this.todos.filter(todo => {
+              const todoDate = new Date(todo.createdAt);
+              return todoDate >= sevenDaysAgo && todoDate <= currentDate;
+          });
+  
+          console.log(lastSevenDaysTasks);
+      }
   });
+  
+  
 
     // Append sidebar to container
     this.container.appendChild(sidebar);

@@ -323,7 +323,7 @@ ul {
 
 
 
-@media (min-width: 600px) {
+@media (min-width: 760px) {
 
     body {
         font-size: 16px;
@@ -341,6 +341,9 @@ ul {
     }
 
 
+
+
+
 }
 
 @media (max-width: 600px) {
@@ -349,9 +352,23 @@ ul {
         font-size: 14px;
     }
 
+    .li {
+        font-size: small;
+    }
+
+    .body::before {
+        font-size: 0.8rem;
+        width: 100%;
+
+    }
+
 
     .sidebar {
         width: 100%;
+    }
+
+    .btn-edit {
+        margin: 12px;
     }
 
 
