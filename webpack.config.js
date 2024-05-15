@@ -3,13 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
   module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: {
        app: './src/index.js',
     },
 
-    devtool: 'inline-source-map',
-    target: 'web', // default value is 'web
+    devtool: 'source-map',
+    target: 'web',
     devServer: {
       static: './dist',
       hot: false,
@@ -18,7 +18,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
     plugins: [
       new HtmlWebpackPlugin({
         title: 'Todo-App',
-        template: './src/template.html', // Path to your HTML template file
+        template: './src/template.html', 
         filename: 'index.html',
       }),
     ],
