@@ -33,7 +33,7 @@ const { clean } = require('gh-pages');
     
     
     output: {
-      filename: 'app.bundle.js',
+      filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
       clean: true,
 
