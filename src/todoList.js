@@ -35,6 +35,7 @@ class TodoList {
       const li = document.createElement('li');
       const checkBox = document.createElement('input');
       checkBox.setAttribute('type', 'checkbox');
+      checkBox.classList.add('btn-check')
       checkBox.checked = todo.completed;
       const titleSpan = document.createElement('span');
       titleSpan.classList.add('todo-title');
