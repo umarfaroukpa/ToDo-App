@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { clean } = require('gh-pages');
 
 
   module.exports = {
@@ -14,14 +15,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
       hot: true,
     },
 
-    plugins: [
-      new HtmlWebpackPlugin({
-        title: 'Todo-App',
-        template: './src/template.html', 
-        filename: 'index.html',
-      }),
-    ],
-    
     module: {
       rules: [
         {
@@ -30,10 +23,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
         },
       ],
     },
+
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Todo-App',
+        template: './src/template.html', 
+      }),
+    ],
+    
     
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
+      clean: true,
 
     },
 
