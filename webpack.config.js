@@ -9,10 +9,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
     },
 
     devtool: 'source-map',
-    target: 'web',
     devServer: {
       static: './dist',
-      hot: false,
+      hot: true,
     },
 
     plugins: [
@@ -35,7 +34,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
-      clean: true,
+
     },
 
   };
